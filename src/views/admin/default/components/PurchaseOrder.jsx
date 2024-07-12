@@ -1,226 +1,210 @@
 import React from "react";
-import styles from "./purchaseOrder.module.css";
 
 const PurchaseOrder = () => {
   return (
-    <div className={styles.mainHoomeRightbar}>
-      <form className={`${styles.form} p-5`}>
-        <h4 className={styles.labelStyles}>Purchase Order Form</h4>
+    <div className="p-6 bg-white rounded-lg shadow-md">
+      <form className="p-5 space-y-6">
+        <h4 className="text-xl font-semibold">Purchase Order Form</h4>
 
-        <div className={`row ${styles.borderBottomStyle} mb-3`}>
-  <div className={`form-group ${styles.col}`} style={{ maxWidth: '300px' }}>
-    <label htmlFor="poType" className={styles.labelStyle}>
-      PO Type <span className={styles.asteriskStyle}>*</span>
-    </label>
-    <select id="poType" className="form-control" required>
-      <option>New</option>
-      <option>Supplementary</option>
-    </select>
-  </div>
-</div>
-
-        <h4 className={styles.labelStyles}>Vendor Details</h4>
-        <div className="row mb-3">
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="vendorType" className={styles.labelStyle}>
-              Vendor Type <span className={styles.asteriskStyle}>*</span>
+        <div className="border-b pb-3 mb-3">
+          <div className="mb-3 max-w-xs">
+            <label htmlFor="poType" className="block font-medium">
+              PO Type <span className="text-red-500">*</span>
             </label>
-            <select id="vendorType" className="form-control" required>
+            <select id="poType" className="block w-full mt-1 border border-gray-300 rounded-md p-2" required>
+              <option>New</option>
+              <option>Supplementary</option>
+            </select>
+          </div>
+        </div>
+
+        <h4 className="text-xl font-semibold">Vendor Details</h4>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
+          <div className="form-group">
+            <label htmlFor="vendorType" className="block font-medium">
+              Vendor Type <span className="text-red-500">*</span>
+            </label>
+            <select id="vendorType" className="block w-full mt-1 border border-gray-300 rounded-md p-2" required>
               <option>Vendor</option>
             </select>
           </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="vendorName" className={styles.labelStyle}>
-              Vendor Name <span className={styles.asteriskStyle}>*</span>
+          <div className="form-group">
+            <label htmlFor="vendorName" className="block font-medium">
+              Vendor Name <span className="text-red-500">*</span>
             </label>
-            <input type="text" id="vendorName" className="form-control" required />
+            <input type="text" id="vendorName" className="block w-full mt-1 border border-gray-300 rounded-md p-2" required />
           </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="vendorBranch" className={styles.labelStyle}>
-              Vendor Branch <span className={styles.asteriskStyle}>*</span>
+          <div className="form-group">
+            <label htmlFor="vendorBranch" className="block font-medium">
+              Vendor Branch <span className="text-red-500">*</span>
             </label>
-            <input
-              type="text"
-              id="vendorBranch"
-              className="form-control"
-              required
-            />
+            <input type="text" id="vendorBranch" className="block w-full mt-1 border border-gray-300 rounded-md p-2" required />
           </div>
         </div>
 
-        <div className="row mb-3">
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="gstin" className={styles.labelStyle}>
-              GSTIN <span className={styles.asteriskStyle}>*</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+          <div className="form-group">
+            <label htmlFor="gstin" className="block font-medium">
+              GSTIN <span className="text-red-500">*</span>
             </label>
-            <input type="text" id="gstin" className="form-control" />
+            <input type="text" id="gstin" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
           </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="msmeId" className={styles.labelStyle}>
-              MSME Id <span className={styles.asteriskStyle}>*</span>
+          <div className="form-group">
+            <label htmlFor="msmeId" className="block font-medium">
+              MSME Id <span className="text-red-500">*</span>
             </label>
-            <input type="text" id="msmeId" className="form-control" />
+            <input type="text" id="msmeId" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
           </div>
         </div>
 
-        <div className={`form-group ${styles.borderBottomStyle} mb-3`}>
-          <label htmlFor="billFromAddress" className={styles.labelStyle}>
-            Bill From Address <span className={styles.asteriskStyle}>*</span>
-          </label>
-          <textarea
-            id="billFromAddress"
-            className="form-control"
-            rows="3"
-          ></textarea>
-        </div>
-
-        <h4 className={styles.labelStyles}>PO Terms</h4>
-        <div className="row mb-3">
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="termsAndConditions" className={styles.labelStyle}>
-              Terms and Conditions <span className={styles.asteriskStyle}>*</span>
+        <div className="border-b pb-3 mb-3">
+          <div className="form-group">
+            <label htmlFor="billFromAddress" className="block font-medium">
+              Bill From Address <span className="text-red-500">*</span>
             </label>
-            <textarea
-              id="termsAndConditions"
-              className="form-control"
-              rows="3"
-            ></textarea>
+            <textarea id="billFromAddress" className="block w-full mt-1 border border-gray-300 rounded-md p-2" rows="3"></textarea>
           </div>
         </div>
 
-        <div className="row mb-3">
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="costCenter" className={styles.labelStyle}>
-              Cost Center <span className={styles.asteriskStyle}>*</span>
+        <h4 className="text-xl font-semibold">PO Terms</h4>
+        <div className="mb-3">
+          <div className="form-group">
+            <label htmlFor="termsAndConditions" className="block font-medium">
+              Terms and Conditions <span className="text-red-500">*</span>
             </label>
-            <input type="text" id="costCenter" className="form-control" />
-          </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="projectId" className={styles.labelStyle}>
-              Project ID <span className={styles.asteriskStyle}>*</span>
-            </label>
-            <input type="text" id="projectId" className="form-control" />
-          </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="quotation" className={styles.labelStyle}>
-              Quotation <span className={styles.asteriskStyle}>*</span>
-            </label>
-            <input type="text" id="quotation" className="form-control" />
+            <textarea id="termsAndConditions" className="block w-full mt-1 border border-gray-300 rounded-md p-2" rows="3"></textarea>
           </div>
         </div>
 
-        <div className="row mb-3">
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="paymentTerms" className={styles.labelStyle}>
-              Payment Terms <span className={styles.asteriskStyle}>*</span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
+          <div className="form-group">
+            <label htmlFor="costCenter" className="block font-medium">
+              Cost Center <span className="text-red-500">*</span>
             </label>
-            <input type="text" id="paymentTerms" className="form-control" />
+            <input type="text" id="costCenter" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
           </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="dueDate" className={styles.labelStyle}>
-              Due Date (in days) <span className={styles.asteriskStyle}>*</span>
+          <div className="form-group">
+            <label htmlFor="projectId" className="block font-medium">
+              Project ID <span className="text-red-500">*</span>
             </label>
-            <input type="number" id="dueDate" className="form-control" />
+            <input type="text" id="projectId" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="quotation" className="block font-medium">
+              Quotation <span className="text-red-500">*</span>
+            </label>
+            <input type="text" id="quotation" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
           </div>
         </div>
 
-        <div className={`row ${styles.borderBottomStyle} mb-3`}>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="projectDescription" className={styles.labelStyle}>
-              Project Description <span className={styles.asteriskStyle}>*</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+          <div className="form-group">
+            <label htmlFor="paymentTerms" className="block font-medium">
+              Payment Terms <span className="text-red-500">*</span>
             </label>
-            <input type="text" id="projectDescription" className="form-control" />
+            <input type="text" id="paymentTerms" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
           </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="comments" className={styles.labelStyle}>
-              Comments <span className={styles.asteriskStyle}>*</span>
+          <div className="form-group">
+            <label htmlFor="dueDate" className="block font-medium">
+              Due Date (in days) <span className="text-red-500">*</span>
             </label>
-            <input type="text" id="comments" className="form-control" />
-          </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="requestedBy" className={styles.labelStyle}>
-              Requested By <span className={styles.asteriskStyle}>*</span>
-            </label>
-            <input type="text" id="requestedBy" className="form-control" />
+            <input type="number" id="dueDate" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
           </div>
         </div>
 
-        <h4 className={styles.labelStyles}>Billing Details</h4>
-        <div className="row mb-3">
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="billingId" className={styles.labelStyle}>
-              Billing Id <span className={styles.asteriskStyle}>*</span>
-            </label>
-            <input type="text" id="billingId" className="form-control" />
-          </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="billingAddress" className={styles.labelStyle}>
-              Billing Address <span className={styles.asteriskStyle}>*</span>
-            </label>
-            <textarea
-              id="billingAddress"
-              className="form-control"
-              rows="3"
-            ></textarea>
-          </div>
-        </div>
-
-        <div className={`row ${styles.borderBottomStyle} mb-3`}>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="billingPanNo" className={styles.labelStyle}>
-              PAN No. <span className={styles.asteriskStyle}>*</span>
-            </label>
-            <input type="text" id="billingPanNo" className="form-control" />
-          </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="billingGstin" className={styles.labelStyle}>
-              GSTIN / UIN <span className={styles.asteriskStyle}>*</span>
-            </label>
-            <input type="text" id="billingGstin" className="form-control" />
+        <div className="border-b pb-3 mb-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="form-group">
+              <label htmlFor="projectDescription" className="block font-medium">
+                Project Description <span className="text-red-500">*</span>
+              </label>
+              <input type="text" id="projectDescription" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="comments" className="block font-medium">
+                Comments <span className="text-red-500">*</span>
+              </label>
+              <input type="text" id="comments" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="requestedBy" className="block font-medium">
+                Requested By <span className="text-red-500">*</span>
+              </label>
+              <input type="text" id="requestedBy" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
+            </div>
           </div>
         </div>
 
-        <h4 className={styles.labelStyles}>Shipping Details</h4>
-        <div className="row mb-3">
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="shippingId" className={styles.labelStyle}>
-              Shipping Id <span className={styles.asteriskStyle}>*</span>
+        <h4 className="text-xl font-semibold">Billing Details</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+          <div className="form-group">
+            <label htmlFor="billingId" className="block font-medium">
+              Billing Id <span className="text-red-500">*</span>
             </label>
-            <input type="text" id="shippingId" className="form-control" />
+            <input type="text" id="billingId" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
           </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="shippingAddress" className={styles.labelStyle}>
-              Shipping Address <span className={styles.asteriskStyle}>*</span>
+          <div className="form-group">
+            <label htmlFor="billingAddress" className="block font-medium">
+              Billing Address <span className="text-red-500">*</span>
             </label>
-            <textarea
-              id="shippingAddress"
-              className="form-control"
-              rows="3"
-            ></textarea>
+            <textarea id="billingAddress" className="block w-full mt-1 border border-gray-300 rounded-md p-2" rows="3"></textarea>
           </div>
         </div>
 
-        <div className={`row ${styles.borderBottomStyle} mb-3`}>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="shippingPanNo" className={styles.labelStyle}>
-              PAN No. <span className={styles.asteriskStyle}>*</span>
-            </label>
-            <input type="text" id="shippingPanNo" className="form-control" />
-          </div>
-          <div className={`form-group ${styles.col}`}>
-            <label htmlFor="shippingGstin" className={styles.labelStyle}>
-              GSTIN / UIN <span className={styles.asteriskStyle}>*</span>
-            </label>
-            <input type="text" id="shippingGstin" className="form-control" />
+        <div className="border-b pb-3 mb-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="form-group">
+              <label htmlFor="billingPanNo" className="block font-medium">
+                PAN No. <span className="text-red-500">*</span>
+              </label>
+              <input type="text" id="billingPanNo" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="billingGstin" className="block font-medium">
+                GSTIN / UIN <span className="text-red-500">*</span>
+              </label>
+              <input type="text" id="billingGstin" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
+            </div>
           </div>
         </div>
 
-        <div className="row mb-3">
-          <div className={`col ${styles.dFlex}`}>
-            <button type="submit" className={`${styles.btn} ${styles.btnPrimary}`}>
-              Submit
-            </button>
+        <h4 className="text-xl font-semibold">Shipping Details</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+          <div className="form-group">
+            <label htmlFor="shippingId" className="block font-medium">
+              Shipping Id <span className="text-red-500">*</span>
+            </label>
+            <input type="text" id="shippingId" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
           </div>
+          <div className="form-group">
+            <label htmlFor="shippingAddress" className="block font-medium">
+              Shipping Address <span className="text-red-500">*</span>
+            </label>
+            <textarea id="shippingAddress" className="block w-full mt-1 border border-gray-300 rounded-md p-2" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div className="border-b pb-3 mb-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="form-group">
+              <label htmlFor="shippingPanNo" className="block font-medium">
+                PAN No. <span className="text-red-500">*</span>
+              </label>
+              <input type="text" id="shippingPanNo" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="shippingGstin" className="block font-medium">
+                GSTIN / UIN <span className="text-red-500">*</span>
+              </label>
+              <input type="text" id="shippingGstin" className="block w-full mt-1 border border-gray-300 rounded-md p-2" />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-end mt-6">
+          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded">
+            Submit
+          </button>
         </div>
       </form>
     </div>

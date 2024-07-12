@@ -6,7 +6,6 @@ import navbarimage from "assets/img/layout/Navbar.png";
 import { BsArrowBarUp } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 import { RiMoonFill, RiSunFill } from "react-icons/ri";
-import "./index.css"
 import {
   IoMdNotificationsOutline,
   IoMdInformationCircleOutline,
@@ -53,7 +52,7 @@ const Navbar = (props) => {
           <p className="pl-3 pr-2 text-xl">
             <FiSearch className="h-4 w-4 text-gray-400 dark:text-white" />
           </p>
-          <lable
+          <input
       type="text"
        placeholder="Search..."
       class="block h-full w-full rounded-full bg-lightPrimary text-sm font-medium text-navy-700 outline-none placeholder:text-gray-400 dark:bg-navy-900 dark:text-white dark:placeholder:text-white border-0"

@@ -52,7 +52,7 @@ const Navbar = (props) => {
           <p className="text-xl pe-2 ps-3">
             <FiSearch className="h-4 w-4 text-gray-400 dark:text-white" />
           </p>
-          <div  
+          <input 
             type="text"
             placeholder="Search..."
             class="block h-full w-full rounded-full bg-lightPrimary text-sm font-medium text-navy-700 outline-none placeholder:!text-gray-400 dark:bg-navy-900 dark:text-white dark:placeholder:!text-white sm:w-fit"
