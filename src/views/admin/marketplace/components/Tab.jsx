@@ -15,15 +15,15 @@ const Tab = () => {
 
   return (
     <div className={styles.tabContainer}>
-      <ul className={styles.tabList}>
+      <ul className="flex flex-wrap border-b mb-4">
         <li
-          className={`${styles.tab} ${getActiveClass(1, styles.activeTabs)}`}
+          className={`mr-1 cursor-pointer p-2 ${getActiveClass(1, "border-b-2 border-blue-500 font-semibold")} hover:bg-gray-100`}
           onClick={() => toggleTab(1)}
         >
           PurchaseOrderForm
         </li>
         <li
-          className={`${styles.tab} ${getActiveClass(2, styles.activeTabs)}`}
+          className={`mr-1 cursor-pointer p-2 ${getActiveClass(2, "border-b-2 border-blue-500 font-semibold")} hover:bg-gray-100`}
           onClick={() => toggleTab(2)}
         >
           PurchaseOrderDetails
