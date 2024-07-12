@@ -29,16 +29,16 @@ const Tab = () => {
           PurchaseOrderDetails
         </li>
       </ul>
-      <div className={styles.contentContainer}>
-        <div className={`${styles.content} ${getActiveClass(1, styles.activeContent)}`}>
-          <div className="mt-5 grid grid-cols-1 gap-5">
-            <MainDashboard />
-          </div>
-        </div>
-        <div className={`${styles.content} ${getActiveClass(2, styles.activeContent)}`}>
-          <DataTables />
-        </div>
-      </div>
+      <div className={`${styles.contentContainer} w-full`}>
+  <div className={`${styles.content} ${getActiveClass(1, styles.activeContent)}`}>
+    <div className="mt-5 grid grid-cols-1 gap-5">
+      <MainDashboard />
+    </div>
+  </div>
+  <div className={`${styles.content} ${getActiveClass(2, styles.activeContent)}`}>
+    <DataTables />
+  </div>
+</div>
     </div>
   );
 };
